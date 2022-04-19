@@ -3,24 +3,17 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 
-class User extends Model {
+class User extends Model {}
 
-}
-
-module.exports = User.init ({
-
+User.init ({
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    date: {
-      type: DataTypes.DATE,
+    username: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
@@ -42,11 +35,13 @@ module.exports = User.init ({
     hooks: {
         beforeCreate: async (user, options) => {user.password = await bcrypt.hash(user.password, 10)},
         beforeUpdate: async (user, options) => {user.password = await bcrypt.hash(user.password, 10)}
-    }
-},{
+    },
+    
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'user',
 });
+
+module.exports = User;

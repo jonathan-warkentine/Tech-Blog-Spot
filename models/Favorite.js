@@ -1,9 +1,10 @@
-const { Model, DataTypes } = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
+const Tag = require('./Tag');
 
-class Comment extends Model {}
+class Favorite extends Model {}
 
-Comment.init ({
+Favorite.init ({
 
     id: {
       type: DataTypes.INTEGER,
@@ -11,21 +12,13 @@ Comment.init ({
       primaryKey: true,
       autoIncrement: true,
     },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     user_id: {
-        type: DataTypes.INTEGER,
-        allowNull:false,
-        references: {
-            model:"user",
-            key:"id"
-        }
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+          model: "tag",
+          key: 'id'
+      }
     },
     post_id: {
         type: DataTypes.INTEGER,
@@ -42,7 +35,7 @@ Comment.init ({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'favorite',
 });
 
-module.exports = Comment;
+module.exports = Favorite;

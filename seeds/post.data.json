@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Post 1 Title",
+        "content": "This is a new post by sal",
+        "date": "April 1, 1999 17:00:00",
+        "author_id": "1"
+    },
+    {
+        "title": "Post 2 Title",
+        "content": "This is a new post by Lenny",
+        "date": "Dec 31, 1999 23:59:59",
+        "author_id": "2"
+    },
+    {
+        "title": "Post 3 Title",
+        "content": "This is a new post by Amiko",
+        "date": "June 12, 2000 17:00:00",
+        "author_id": "3"
+    },
+    {
+        "title": "Post 4 Title",
+        "content": "this is another post by Amiko",
+        "date": "January 1, 2009 17:00:00",
+        "author_id": "3"
+    }
+]

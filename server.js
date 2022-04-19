@@ -1,16 +1,15 @@
-const express = require('express')();
-const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const express = require('express');
+const sequelize = require('./config/connection');
+
+const routes = require('./controllers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+// app.use(express.static('./public'));
 
-app.use(express.static('./public'));
-//set up routes
+app.use(routes);
 
-app.listen(PORT, () => {
-    console.log('Server listening on: http://localhost:' + PORT);
-  });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});

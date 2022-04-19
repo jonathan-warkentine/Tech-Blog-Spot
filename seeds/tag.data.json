@@ -1,0 +1,284 @@
+[
+    {
+     "tagname": "Array"
+    },
+    {
+     "tagname": "Object"
+    },
+    {
+     "tagname": "Javascript"
+    },
+    {
+      "tagname": "HTML"
+    },
+    {
+      "tagname": "CSS"
+    },
+    {
+      "tagname": "C#"
+    },
+    {
+      "tagname": "jQuery"
+    },
+    {
+      "tagname": "String"
+    },
+    {
+      "tagname": "Typescript"
+    },
+    {
+      "tagname": "Objective C"
+    },
+    {
+      "tagname": "Express.js"
+    },
+    {
+      "tagname": "SQL"
+    },
+    {
+      "tagname": "API"
+    },
+    {
+      "tagname": "Bootstrap"
+    },
+    {
+      "tagname": "Angular"
+    },
+    {
+      "tagname": "Ruby Rails"
+    },
+    {
+      "tagname": "Golang"
+    },
+    {
+      "tagname": "Scala"
+    },
+    {
+      "tagname": "Java"
+    },
+    {
+      "tagname": "Python"
+    },
+    {
+      "tagname": "OOP"
+    },
+    {
+      "tagname": "PHP"
+    },
+    {
+      "tagname": "Front-End"
+    },
+    {
+      "tagname": "Back-End"
+    },
+    {
+      "tagname": "Node.js"
+    },
+    {
+      "tagname": "Models"
+    },
+    {
+      "tagname": "README"
+    },
+    {
+      "tagname": "JSON"
+    },
+    {
+      "tagname": "Query"
+    },
+    {
+      "tagname": "Navigation"
+    },
+    {
+      "tagname": "Variables"
+    },
+    {
+      "tagname": "Array Methods"
+    },
+    {
+      "tagname": "Math"
+    },
+    {
+      "tagname": "Booleans"
+    },
+    {
+      "tagname": "Maps"
+    },
+    {
+      "tagname": "Loops"
+    },
+    {
+      "tagname": "Views"
+    },
+    {
+      "tagname": "Hosting"
+    },
+    {
+      "tagname": "Data Types"
+    },
+    {
+      "tagname": "Select"
+    },
+    {
+      "tagname": "Methods"
+    },
+    {
+      "tagname": "MySQL"
+    },
+    {
+      "tagname": "SQL Server"
+    },
+    {
+      "tagname": "MS Access"
+    },
+    {
+      "tagname": "Oracle"
+    },
+    {
+      "tagname": "Synase"
+    },
+    {
+      "tagname": "Informix"
+    },
+    {
+      "tagname": "Postgres"
+    },
+    {
+      "tagname": "Let"
+    },
+    {
+      "tagname": "Events"
+    },
+    {
+      "tagname": "Number Methods"
+    },
+    {
+      "tagname": "Dates"
+    },
+    {
+      "tagname": "Switch"
+    },
+    {
+      "tagname": "Loops"
+    },
+    {
+      "tagname": "Classes"
+    },
+    {
+      "tagname": "Arrow Function"
+    },
+    {
+      "tagname": "If Else"
+    },
+    {
+      "tagname": "Random"
+    },
+    {
+      "tagname": "Operators"
+    },
+    {
+      "tagname": "xcode"
+    },
+    {
+      "tagname": "GET"
+    },
+    {
+      "tagname": "OPEN"
+    },
+    {
+      "tagname": "POST"
+    },
+    {
+      "tagname": "git"
+    },
+    {
+      "tagname": "azure"
+    },
+    {
+      "tagname": "flutter"
+    },
+    {
+      "tagname": "wordpress"
+    },
+    {
+      "tagname": "facebook"
+    },
+    {
+      "tagname": "google-maps"
+    },
+    {
+      "tagname": "authentication"
+    },
+    {
+      "tagname": "debugging"
+    },
+    {
+      "tagname": "amazon-web-services"
+    },
+    {
+      "tagname": "mongoose"
+    },
+    {
+      "tagname": "curl"
+    },
+    {
+      "tagname": "redirect"
+    },
+    {
+      "tagname": "dom"
+    },
+    {
+      "tagname": "logging"
+    },
+    {
+      "tagname": "matrix"
+    },
+    {
+      "tagname": "optimization"
+    },
+    {
+      "tagname": "caching"
+    },
+    {
+      "tagname": "memory"
+    },
+    {
+      "tagname": "arraylist"
+    },
+    {
+      "tagname": "cookies"
+    },
+    {
+      "tagname": "input"
+    },
+    {
+      "tagname": "data-structures"
+    },
+    {
+      "tagname": "mobile"
+    },
+    {
+      "tagname": "ssh"
+    },
+    {
+      "tagname": ".net"
+    },
+    {
+      "tagname": "swift"
+    },
+    {
+      "tagname": "image"
+    },
+    {
+      "tagname": "algorithm"
+    },
+    {
+      "tagname": "apache"
+    },
+    {
+      "tagname": "sqlite"
+    },
+    {
+      "tagname": "vue.js"
+    }
+]
