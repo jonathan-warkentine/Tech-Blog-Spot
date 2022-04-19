@@ -1,0 +1,26 @@
+{{#each posts as |post|}}
+<div class="post bg-light rounded d-flex flex-column align-items-center p-3">
+    <h2>{{post.title}}</a></h2>
+    <p>Published by <a href="/profile/{{post.user_id}}">{{post.user.username}}</a> on {{format_date post.date}}</p>
+    <div class="fav-status d-flex justify-content-start p-2">
+      {{!-- <i postid="{{post.id}}" isFav="{{if_contains post.id ../user.favorites}}" onclick="favorite(this)" class="fa fa-2x fa-heart fa-heart-o"></i> --}}
+      <p class="p-1 pl-2 favCount">{{post.favoriters.length}}</p>
+    </div>
+  <div class="p-2 content" postid="{{post.id}}">
+    <pre class="border p-2 rounded bg-white" onclick="clickcopy(this.parentElement)">{{post.content}}</pre>
+    <p class="mt-4">Tags: {{#each post.tags as |tag|}} {{tag.tagname}}. {{else}} none {{/each}}</p>
+  </div>
+</div>
+
+{{else}}
+<div class="d-flex container justify-content-center">
+  <div class="row">
+    <h1 class="pr-3 align-self-end">{ </h1>
+    <h3 class="text-muted align-self-center"><i>No posts Here...</i></h3>
+    <h1 class="pl-3"> }</h1>
+  </div>
+</div>
+{{/each}}
+
+
+

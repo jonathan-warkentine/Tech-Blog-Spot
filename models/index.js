@@ -14,6 +14,7 @@ User.belongsToMany(Post, { //putting this many-to-many rel before the one-to-man
 });
 
 Post.belongsToMany(User, {
+    as: 'favoriters',
     through: Favorite
 });
 

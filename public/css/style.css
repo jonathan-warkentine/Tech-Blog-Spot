@@ -1,0 +1,14 @@
+body{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  
+  .sticky-top, .post:not(:last-child) {
+    border-bottom: 2px solid rgb(17, 9, 9);
+  }
+  
+  .post {
+    margin: 20px;
+    border: 1px solid lightgray;
+    border-bottom: 2px solid black;
+  }
