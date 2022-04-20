@@ -12,7 +12,7 @@ Favorite.init ({
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -20,7 +20,7 @@ Favorite.init ({
           key: 'id'
       }
     },
-    post_id: {
+    postId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

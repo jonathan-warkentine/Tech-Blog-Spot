@@ -8,7 +8,7 @@
             <p class="text-light p-2">Published by <a href="/profile/{{author_id}}">{{user.username}}</a> on {{format_date date}}</p>
         </div>
         <div class="fav-status d-flex flex-nowrap p-3 ">
-            <i postid="{{id}}" isFav="{{isFav id ../user.favorites}}" onclick="favorite(this)" class="fa fa-2x fa-heart fa-heart-o text-light"></i>
+            <i postid="{{id}}" isFav="{{isFav id @root.user.favorites}}" onclick="favorite(this)" class="fa fa-2x fa-heart fa-heart-o text-light"></i>
             <p class="favCount text-light pt-2 pl-2">{{favoriters.length}}</p>
         </div>
     </header>

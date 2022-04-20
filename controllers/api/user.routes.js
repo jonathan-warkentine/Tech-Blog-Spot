@@ -49,8 +49,8 @@ router.put('/favorite/:id', async (req, res) => {
     try {
         const existing = await Favorite.findOne({
             where: {
-                user_id: req.session.user.id,
-                post_id: req.params.id
+                userId: req.session.user.id,
+                postId: req.params.id
             }
         });
 
@@ -59,8 +59,8 @@ router.put('/favorite/:id', async (req, res) => {
         }
         else {
             await Favorite.create({
-                user_id: req.session.user.id,
-                post_id: req.params.id
+                userId: req.session.user.id,
+                postId: req.params.id
             });
     
             res.sendStatus(200);

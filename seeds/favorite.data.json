@@ -1,18 +1,18 @@
 [
     {
-        "user_id": 1,
-        "post_id": 2
+        "userId": 1,
+        "postId": 2
     },
     {
-        "user_id": 2,
-        "post_id": 2
+        "userId": 2,
+        "postId": 2
     },
     {
-        "user_id": 1,
-        "post_id": 3
+        "userId": 1,
+        "postId": 3
     },
     {
-        "user_id": 3,
-        "post_id": 1
+        "userId": 3,
+        "postId": 1
     }
 ]

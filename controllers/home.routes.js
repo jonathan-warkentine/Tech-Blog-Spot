@@ -3,19 +3,31 @@ const sequelize = require('../config/connection');
 const {Comment, Post, User, Tag, Favorite, TagPost} = require('../models');
 
 router.get('/', async (req, res) => {
-    console.log(req.session.user);
     try {
         let posts = await Post.findAll({
             order: sequelize.random(),
-            include: ['favoriters', User, Tag]
+            include: ['favoriters', Tag, User]
         });
         posts = posts.map(post => post.get({plain: true}));
 
-        res.render('homepage', {
-            posts,
-            loggedIn: req.session.loggedIn,
-            user: req.session.user
-        });
+        if (!req.session.user) {
+            res.render('homepage', {
+                posts,
+                loggedIn: req.session.loggedIn,
+            });
+        }
+        else {
+            let user = await User.findByPk(req.session.user.id, {
+                include: 'favorites'
+            });
+            user = user.get({plain: true});
+
+            res.render('homepage', {
+                posts,
+                loggedIn: req.session.loggedIn,
+                user
+            });
+        }
     }
     catch (error) {
         res.status(500).json(error);
