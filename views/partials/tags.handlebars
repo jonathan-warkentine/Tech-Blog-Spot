@@ -1,0 +1,11 @@
+<div class="row m-3 p-3 post">
+  <div class="col-md-5">
+    <h3 style="text-decoration: underline;" class="text-primary pb-3">{{tagname}}:</h3>
+    <div class="d-flex flex-nowrap">
+        {{#each posts as |post|}}
+        <a class="text-secondary pr-3" href="/posts/{{id}}">{{title}}</a><br>    
+        {{/each}}
+    </div>
+    
+  </div>
+</div>

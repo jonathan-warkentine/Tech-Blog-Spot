@@ -3,12 +3,35 @@ body{
     padding-right: 2px;
   }
   
-  .sticky-top, .post:not(:last-child) {
+  .sticky-top{
     border-bottom: 2px solid rgb(17, 9, 9);
   }
   
   .post {
-    margin: 20px;
     border: 1px solid lightgray;
     border-bottom: 2px solid black;
   }
+
+  a{
+    color: black;
+  }
+
+  pre {
+    border: black solid 1px;
+  }
+
+  .bg-light{
+    background-color: #f8f9fa;
+  }
+
+
+/* FA Icons */
+
+.fa{
+  font-size:30px;
+  color:red;
+}
+
+.fa:hover{
+  cursor: pointer;
+}

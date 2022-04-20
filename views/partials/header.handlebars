@@ -1,8 +1,8 @@
-<nav class="navbar navbar-dark bg-primary rounded p-3 sticky-top">
-    <a class="navbar-brand" href="/">Tech Blog</a>
-    <ul class="nav">
+<nav class="navbar navbar-dark bg-dark rounded p-4 sticky-top d-flex justify-content-between">
+    <a href="/"><h1 class="header-1 text-light ml-3">Tech Blog</h1></a>
+    <ul class="nav mr-5 pr-5">
       <li class="nav-item ">
-        <a class="nav-link text-light" href="/top">Top Posts <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="/top">Top Posts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-light" href="/categories">Categories</a>
@@ -12,7 +12,17 @@
       </li>
     </ul>
 
-  <div>
-      <a class="nav-link text-light" href="/login">Login</a>
-  </div>
+  {{!-- LOGIN/LOGOUT MENU--}}
+  {{#if loggedIn}}
+    <div>
+        <a id="logout" class="nav-link text-light" href="api/users/logout">Logout</a>
+    </div>
+    <script src="./js/logout.js"></script>
+  {{else}}
+    <div>
+        <a class="nav-link text-light" href="/login">Login</a>
+    </div>
+  {{/if}}
+
 </nav>
+
