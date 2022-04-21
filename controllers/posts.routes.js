@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const {Comment, Post, User, Tag, Favorite, TagPost} = require('../models');
+const {Comment, Post, User, Tag} = require('../models');
 
 router.get('/top', async (req, res) => {
     
@@ -68,7 +68,6 @@ router.get('/:id/comment', async (req, res) => {
             res.status(404).json({'error': 'No Such Post'});
         }
 
-        console.log(posts)
         res.render('draftComment', {
             posts: [posts],
             loggedIn: req.session.loggedIn,

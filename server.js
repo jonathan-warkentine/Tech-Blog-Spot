@@ -9,7 +9,7 @@ const session = require('express-session');
 const routes = require('./controllers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

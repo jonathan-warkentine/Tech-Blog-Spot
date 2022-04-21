@@ -6,4 +6,12 @@
   {{>comment}}
 {{/each}}
 
+<div class="container-fluid p-3 mt-5">
+  <form id="inputs" class="container-fluid d-flex flex-nowrap m-0 p-0" autocomplete="off">
+    <textarea id="content" name="post" postid="{{posts.[0].id}}" class="border container-fluid" placeholder="Draft Your Comment Here..."></textarea>
+    <button id="submitdraft" class="btn btn-primary btn-lg m-3 p-1 pr-3 pl-3 border">Submit</button>
+  </form>
+</div>
+
 <script src="../../js/favorite.js"></script>
+<script src="../../js/submitComment.js"></script>

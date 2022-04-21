@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const {User, Post, Favorite, TagPost, Tag} = require('../../models');
 
-
 router.post('/', async (req, res) => {
     try {
         const newPost = await Post.create({
