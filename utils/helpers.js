@@ -5,7 +5,6 @@ module.exports = {
     },
 
     isFav: (postID, favsArr=[]) => {
-      console.log(postID, favsArr.map(post => post.id).includes(postID))
       return favsArr.map(post => post.id).includes(postID)? 'true': 'false';
     },
 

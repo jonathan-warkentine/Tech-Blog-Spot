@@ -4,8 +4,11 @@ document.getElementById("submitdraft").addEventListener('click', submitPost);
 function submitPost(){
     const title = document.getElementById('title').value;
     const content = document.getElementById('post').value;
+    
+    // 'Massage' tags into an array
     let tags = document.getElementById('tags').value;
     tags = tags.replaceAll(',', '');
+    tags = tags.split(' ');
 
     if (title && content && tags) {
         const post = {
