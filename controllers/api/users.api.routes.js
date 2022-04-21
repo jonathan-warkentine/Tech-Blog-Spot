@@ -47,35 +47,29 @@ router.post('/login', async (req, res) => {
 
 router.put('/favorite/:id', async (req, res) => {
     try {
-        const existing = await Favorite.findOne({
+        let [entry, created] = await Favorite.findOrCreate({
             where: {
                 userId: req.session.user.id,
                 postId: req.params.id
             }
         });
-
-        if (existing){
-            await existing.destroy();
+        
+        if (!created){
+            await entry.destroy();
+            res.status(200).json(entry);
         }
         else {
-            await Favorite.create({
-                userId: req.session.user.id,
-                postId: req.params.id
-            });
-    
-            res.sendStatus(200);
+            res.status(200).json(entry);
         }
     }
     catch (error) {
         res.status(400).json(error);
     }
-    
-
 });
 
 router.get('/logout', async (req, res) => {
     req.session.loggedIn = false;
-    res.status(200).redirect('/');
+    res.status(200).redirect('../../../');
 });
 
 module.exports = router;

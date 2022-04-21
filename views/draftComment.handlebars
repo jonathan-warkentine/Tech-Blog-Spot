@@ -1,0 +1,9 @@
+<div class="d-flex flex-column align-items-start justify-content-start m-2">
+
+{{> posts posts.[0]}}
+
+{{#each posts.[0].comments as |comment|}}
+  {{>comment}}
+{{/each}}
+
+<script src="../../js/favorite.js"></script>

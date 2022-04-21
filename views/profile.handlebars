@@ -1,0 +1,20 @@
+<div class="m-3 d-flex flex-column align-items-center">
+  {{#if (eq profileUser.id user.id)}}
+  <div class="d-flex flex-row rounded border mt-4 pl-2 pr-2 align-items-center">
+    <h3>👉 </h3><a href="/compose"> Draft a New Blog Post </a><h3> 👈</h3>
+  </div>
+  {{/if}}
+  
+  <nav class="mt-5">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="/profile/{{profileUser.id}}">{{profileUser.username}}'s Posts</a></li>
+      <li class="page-item"><a class="page-link" href="/profile/{{profileUser.id}}/favorites">{{profileUser.username}}'s Favorites</a></li>
+    </ul>
+  </nav>
+
+  {{#each posts as |post|}}
+    {{>posts}}
+  {{/each}}
+</div>
+
+<script src="../../js/favorite.js"></script>

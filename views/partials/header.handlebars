@@ -2,22 +2,21 @@
     <a href="/"><h1 class="header-1 text-light ml-3">Tech Blog</h1></a>
     <ul class="nav mr-5 pr-5">
       <li class="nav-item ">
-        <a class="nav-link text-light" href="/top">Top Posts</a>
+        <a class="nav-link text-light" href="/posts/top">Top Posts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-light" href="/categories">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" href="/dashboard">Dashboard</a>
+        <a class="nav-link text-light" href="/profile/{{user.id}}">Dashboard</a>
       </li>
     </ul>
 
   {{!-- LOGIN/LOGOUT MENU--}}
   {{#if loggedIn}}
     <div>
-        <a id="logout" class="nav-link text-light" href="api/users/logout">Logout</a>
+        <a id="logout" class="nav-link text-light" href="/api/users/logout">Logout</a>
     </div>
-    <script src="./js/logout.js"></script>
   {{else}}
     <div>
         <a class="nav-link text-light" href="/login">Login</a>

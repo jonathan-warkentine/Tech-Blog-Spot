@@ -1,13 +1,20 @@
 <div class="d-flex flex-column align-items-start justify-content-start m-2">
   {{#each posts as |post|}}
-  {{> post}}
+    {{> posts}}
   {{else}}
-  <div class="d-flex container justify-content-center">
-    <div class="row">
-      <h1 class="pr-3 align-self-end">{ </h1>
-      <h3 class="text-muted align-self-center"><i>No posts Here...</i></h3>
-      <h1 class="pl-3"> }</h1>
+    <div class="d-flex container justify-content-center">
+      <div class="row">
+        <h1 class="pr-3 align-self-end">{ </h1>
+        <h3 class="text-muted align-self-center"><i>No posts Here...</i></h3>
+        <h1 class="pl-3"> }</h1>
+      </div>
     </div>
-  </div>
   {{/each}}
+  
+{{#each posts.[0].comments as |comment|}}
+  {{>comment}}
+{{/each}}
 </div>
+
+{{!-- Links --}}
+<script src="../../js/favorite.js"></script>

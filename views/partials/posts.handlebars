@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 {{!-- post div --}}
+
 <div class="container-fluid post rounded d-flex flex-column align-items-start justify-content-center p-0 mt-5 bg-light">
     <header class="container-fluid rounded-top bg-secondary d-flex flex-column flex-md-row align-items-center justify-content-between">
         <div class="d-flex flex-column flex-sm-row align-items-center p-3">
@@ -12,22 +13,13 @@
             <p class="favCount text-light pt-2 pl-2">{{favoriters.length}}</p>
         </div>
     </header>
-    <div class="justify-content-start p-0">
+    <div class="container-fluid justify-content-start p-0">
         <div class="p-4 content" postid="{{id}}">
-            <pre class="p-3 rounded" onclick="clickcopy(this.parentElement)">{{content}}</pre>
+            <pre class="p-3 rounded">{{content}}</pre>
             <p class="mt-4">Tags: {{#each tags as |tag|}} {{tagname}}. {{else}} (none) {{/each}}</p>
         </div>
     </div>
 </div>
 
-{{!-- Comments Div --}}
-{{#each comments as |comment|}}
-{{>comment}}
-{{/each}}
-
-{{!-- Links --}}
-<script src="./js/favorite.js"></script>
-
-
-
-
+{{!-- Add a Comment --}}
+<h5 class="text-center p-2 ml-3"><a href="../../../posts/{{id}}/comment">[ Add Comment ]</a></h5>
