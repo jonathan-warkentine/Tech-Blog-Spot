@@ -10,7 +10,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./controllers');
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -23,7 +23,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 36000,
+    maxAge: 360000,
     // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. Having this set to true, and running a server without encryption will result in the cookies not showing up in your developer console.
     secure: 'auto',
     // sameSite tells express-session to only initialize session cookies when the referrer provided by the client matches the domain out server is hosted from.

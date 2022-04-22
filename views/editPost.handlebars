@@ -1,0 +1,11 @@
+<div id="draft" class="container d-flex flex-column align-items-center p-4 mb-5 mt-5 border rounded">
+    <h1 class="text-center mb-5">{ Edit Your Post Below! }</h1>
+    <form id="inputs" class="container m-0 p-0" autocomplete="off">
+        <input type="text" name="title" id="title" placeholder="Title" class="mb-4 w-100" value="{{posts.title}}">
+        <textarea id="post" postid="{{posts.id}}" name="post" cols="30" rows="10" class="border w-100" placeholder="Post content here...">{{posts.content}}</textarea>
+        <input type="text" name="tags" id="tags" placeholder="Add Tags" class="mt-4 w-100" value="{{#each posts.tags as |tag|}}{{tag.tagname}} {{/each}}">
+    </form>
+    <button id="submitdraft" class="btn btn-primary btn-lg mt-5 m-3 p-1 pr-3 pl-3 border">Submit</button>
+</div>
+
+<script src="../../../js/editPost.js"></script>

@@ -88,4 +88,23 @@ router.get('/:id/comment', auth, async (req, res) => {
     }
 });
 
+router.get('/:id/edit', async (req, res) => {
+    try {
+        let posts = await Post.findByPk(req.params.id, {
+            include: Tag
+        });
+        posts = posts.get({plain: true});
+
+        res.render('editPost', {
+            loggedIn: req.session.loggedIn,
+            user: req.session.user,
+            posts
+        });
+    }
+        
+    catch (error) {
+        res.status(500).json(error);
+    }
+});
+
 module.exports = router;
