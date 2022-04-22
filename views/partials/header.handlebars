@@ -7,9 +7,11 @@
       <li class="nav-item">
         <a class="nav-link text-light" href="/categories">Categories</a>
       </li>
+      {{#if loggedIn}}
       <li class="nav-item">
         <a class="nav-link text-light" href="/profile/{{user.id}}">Dashboard</a>
       </li>
+      {{/if}}
     </ul>
 
   {{!-- LOGIN/LOGOUT MENU--}}

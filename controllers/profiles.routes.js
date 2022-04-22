@@ -1,10 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const {Post, User} = require('../models');
+const auth = require('../utils/auth');
 
-
-router.get('/:id', async (req, res) => {
-    
+router.get('/:id', auth, async (req, res) => {
     try {
         let profileUser = await User.findByPk(req.params.id);
         profileUser = profileUser.get({plain: true});
@@ -28,7 +27,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.get('/:id/favorites', async (req, res) => {
+router.get('/:id/favorites', auth, async (req, res) => {
     
     try {
         let profileUser = await User.findByPk(req.params.id, {

@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const {Post, User, Tag} = require('../models');
+const auth = require('../utils/auth');
+
+
 
 router.get('/', async (req, res) => {
     try {
@@ -34,7 +37,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/compose', async (req, res) => {
+router.get('/compose', auth, async (req, res) => {
     res.render('compose', {
         loggedIn: req.session.loggedIn,
         user: req.session.user

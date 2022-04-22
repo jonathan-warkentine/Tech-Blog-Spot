@@ -12,4 +12,8 @@ router.use('/categories', tagRoutes);
 router.use('/profile', profileRoutes);
 router.use('/', homeRoutes);
 
+router.get('*', (req, res) => {
+    res.send('<h2>Page Not Found</h2>', 404);
+});
+
 module.exports = router;
