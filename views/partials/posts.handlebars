@@ -13,7 +13,7 @@
             <p class="favCount text-light pt-2 pl-2">{{favoriters.length}}</p>
         </div>
     </header>
-    <div class="container-fluid row d-flex flex-column-reverse flex-wrap flex-md-row p-0">
+    <div class="container-fluid row d-flex flex-column-reverse flex-wrap flex-md-row p-0 m-2">
         {{#if (eq author_id @root.user.id)}}
         <div class="col-2 d-flex flex-wrap align-items-center justify-content-around p-5 ml-4">
             <a class="btn mb-2 border" href="/posts/{{id}}/edit">EDIT POST</a>

@@ -8,7 +8,7 @@ const apiRoutes = require('./api');
 
 router.use('/api', apiRoutes);
 router.use('/posts', postRoutes);
-router.use('/categories', tagRoutes);
+router.use('/topics', tagRoutes);
 router.use('/profile', profileRoutes);
 router.use('/', homeRoutes);
 

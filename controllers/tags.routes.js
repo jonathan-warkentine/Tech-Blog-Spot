@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         });
         tags = tags.map(tag => tag.get({plain: true}));
 
-        res.render('categories', {
+        res.render('topics', {
             tags,
             loggedIn: req.session.loggedIn,
             user: req.session.user
