@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const {Post, User} = require('../models');
+const {Post, User, Tag} = require('../models');
 const auth = require('../utils/auth');
 
 router.get('/:id', auth, async (req, res) => {
@@ -11,7 +11,8 @@ router.get('/:id', auth, async (req, res) => {
         let posts = await Post.findAll({
             where: {
                 author_id: req.params.id 
-            }
+            },
+            include: Tag
         });
         posts = posts.map(post => post.get({plain: true}));
 
