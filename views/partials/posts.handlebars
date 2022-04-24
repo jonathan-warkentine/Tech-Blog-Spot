@@ -3,7 +3,7 @@
 {{!-- post div --}}
 
 <div class="container-fluid post rounded d-flex flex-column align-items-start justify-content-center p-0 mt-5 mb-2 bg-light">
-    <header class="container-fluid rounded-top bg-secondary d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <header class="row-auto w-100 rounded-top bg-secondary d-flex flex-column flex-md-row align-items-center justify-content-between">
         <div class="d-flex flex-column flex-sm-row align-items-center p-3">
             <a href="/posts/{{id}}"><h2 class="text-light border rounded p-2 pr-4 pl-4">{{title}}</h2></a>
             <p class="text-light p-2">Published by <a href="/profile/{{author_id}}">{{user.username}}</a> on {{format_date date}}</p>
@@ -13,17 +13,16 @@
             <p class="favCount text-light pt-2 pl-2">{{favoriters.length}}</p>
         </div>
     </header>
-    <div class="container-fluid row d-flex flex-column-reverse flex-wrap flex-md-row p-0 m-2">
+    <div class="row-auto w-100 d-flex flex-column-reverse flex-wrap flex-md-row align-items-center justify-content-end p-3">
         {{#if (eq author_id @root.user.id)}}
-        <div class="col-2 d-flex flex-wrap align-items-center justify-content-around p-5 ml-4">
-            <a class="btn mb-2 border" href="/posts/{{id}}/edit">EDIT POST</a>
-            <a postid="{{id}}" class="btn btn-danger border text-light" onclick="import('../../js/delPost.js').then((module) => module.delPost(this));">🗑️ DELETE</a>
+        <div class="col-1 d-flex flex-md-column align-items-center justify-content-around">
+            <a class="btn border m-1" href="/posts/{{id}}/edit">EDIT POST</a>
+            <a postid="{{id}}" class="btn btn-danger border text-light m-1" onclick="import('../../js/delPost.js').then((module) => module.delPost(this));">🗑️ DELETE</a>
         </div>
         {{/if}}
         <div class="col p-4 content" postid="{{id}}">
-            <pre class="p-3 rounded">{{content}}</pre>
+            <pre class="container-fluid p-3 rounded">{{content}}</pre>
             <p class="mt-4">Tags: {{#each tags as |tag|}} {{tagname}}. {{else}} (none) {{/each}}</p>
         </div>
-        
     </div>
 </div>
